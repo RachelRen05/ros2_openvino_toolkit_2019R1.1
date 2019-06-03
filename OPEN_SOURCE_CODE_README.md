@@ -44,7 +44,7 @@ This project is a ROS2 wrapper for CV API of [OpenVINO™](https://software.inte
 **Note**:You can also choose to follow the steps below to build the environment step by step.
 * Install ROS2 [Crystal](https://github.com/ros2/ros2/wiki) ([guide](https://index.ros.org/doc/ros2/Installation/Linux-Development-Setup/))<br>
 * Install OpenVINO™ Toolkit Open Source<br>
-	* Install [OpenCV 3.4 or later](https://docs.opencv.org/master/d9/df8/tutorial_root.html)([guide](https://docs.opencv.org/master/d7/d9f/tutorial_linux_install.html))
+	* Install [OpenCV 3.4.2](https://docs.opencv.org/master/d9/df8/tutorial_root.html)([guide](https://docs.opencv.org/master/d7/d9f/tutorial_linux_install.html))
 		```bash
 		[compiler] sudo apt-get install build-essential
 		[required] sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
@@ -181,5 +181,6 @@ This project is a ROS2 wrapper for CV API of [OpenVINO™](https://software.inte
 	sudo mkdir -p /opt/openvino_toolkit
 	sudo ln -sf ~/ros2_overlay_ws/src/ros2_openvino_toolkit /opt/openvino_toolkit/
 	```
+
 
 
