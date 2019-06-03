@@ -219,7 +219,7 @@ One-step installation scripts are provided for the dependencies' installation. P
 	```
 * run vehicle detection sample code input from StandardCamera.
 	```bash
-	ros2 launch dynamic_vino_sample pipeline_vehicle_detection_oss.yaml
+	ros2 launch dynamic_vino_sample pipeline_vehicle_detection_oss.launch.py
 	```
 * run object detection service sample code input from Image  
   Run image processing service:
