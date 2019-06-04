@@ -139,7 +139,7 @@ This project is a ROS2 wrapper for CV API of [OpenVINO™](https://software.inte
 	colcon build --symlink-install
 	source ./install/local_setup.bash
  	sudo mkdir -p /opt/openvino_toolkit
- 	sudo ln -sf ~/ros2_overlay_ws/src/ros2_openvino_toolkit /opt/openvino_toolkit/ros2_openvino_toolkit
+ 	sudo ln -sf ~/ros2_overlay_ws/src/ros2_openvino_toolkit /opt/openvino_toolkit/
 	```
 	
 ## 5. Running the Demo
@@ -172,7 +172,7 @@ This project is a ROS2 wrapper for CV API of [OpenVINO™](https://software.inte
 	sudo mkdir -p /opt/models
 	sudo ln -sf ~/Downloads/models/mask_rcnn_inception_v2_coco_2018_01_28 /opt/models/
 	#object detection model
-	/opt/intel/openvino/deployment_tools/tools/model_downloader
+	cd /opt/intel/openvino/deployment_tools/tools/model_downloader
 	sudo python3 ./downloader.py --name mobilenet-ssd
 	#FP32 precision model
 	sudo python3 /opt/intel/openvino/deployment_tools/model_optimizer/mo.py --input_model /opt/intel/openvino/deployment_tools/tools/model_downloader/object_detection/common/mobilenet-ssd/caffe/mobilenet-ssd.caffemodel --output_dir /opt/intel/openvino/deployment_tools/tools/model_downloader/object_detection/common/mobilenet-ssd/caffe/output/FP32 --mean_values [127.5,127.5,127.5] --scale_values [127.5]
@@ -203,6 +203,7 @@ This project is a ROS2 wrapper for CV API of [OpenVINO™](https://software.inte
 	sudo cp /opt/openvino_toolkit/ros2_openvino_toolkit/data/labels/object_segmentation/frozen_inference_graph.labels ~/Downloads/models/mask_rcnn_inception_v2_coco_2018_01_28/output
 	sudo cp /opt/openvino_toolkit/ros2_openvino_toolkit/data/labels/object_detection/mobilenet-ssd.labels /opt/intel/openvino/deployment_tools/tools/model_downloader/object_detection/common/mobilenet-ssd/caffe/output/FP32
 	sudo cp /opt/openvino_toolkit/ros2_openvino_toolkit/data/labels/object_detection/mobilenet-ssd.labels /opt/intel/openvino/deployment_tools/tools/model_downloader/object_detection/common/mobilenet-ssd/caffe/output/FP16
+	sudo cp /opt/openvino_toolkit/ros2_openvino_toolkit/data/labels/object_detection/vehicle-license-plate-detection-barrier-0106.labels /opt/intel/openvino/deployment_tools/tools/model_downloader/Security/object_detection/barrier/0106/dldt
 	```
 	* set ENV LD_LIBRARY_PATH and environment
 	```bash
